@@ -1,0 +1,52 @@
+[
+  {
+    "serviceId": "4",
+    "payeeTitle": "Мегафон",
+    "subline": "ОАО \"Мегафон\"",
+    "icon": "megafon",
+    "inn": "7744000775",
+    "processPaymentType": "ONE_STEP_SCHEME",
+    "checkNecessity": "CHECK_NECESSARY",
+    "payeeHidden": false
+  },
+  {
+    "serviceId": "2",
+    "payeeTitle": "МТС",
+    "subline": "ОАО \"Мобильные телесистемы\"",
+    "icon": "mts",
+    "inn": "7744000775",
+    "processPaymentType": "ONE_STEP_SCHEME",
+    "checkNecessity": "CHECK_NECESSARY",
+    "payeeHidden": false
+  },
+  {
+    "serviceId": "6",
+    "payeeTitle": "TELE2",
+    "subline": "ЗАО \"Ростовская сотовая связь\"",
+    "icon": "tele2",
+    "inn": "7744000775",
+    "processPaymentType": "ONE_STEP_SCHEME",
+    "checkNecessity": "CHECK_NECESSARY",
+    "payeeHidden": false
+  },
+  {
+    "serviceId": "3",
+    "payeeTitle": "Билайн (Сотовая связь)",
+    "subline": "ОАО \"Вымпелком\"",
+    "icon": "beeline",
+    "inn": "7744000775",
+    "processPaymentType": "ONE_STEP_SCHEME",
+    "checkNecessity": "CHECK_NECESSARY",
+    "payeeHidden": false
+  },
+  {
+    "serviceId": "1847",
+    "payeeTitle": "СберМобайл",
+    "subline": "ООО НКО \"РАПИДА\" г.Москва",
+    "icon": "rapida_149",
+    "inn": "7744000775",
+    "processPaymentType": "ONE_STEP_SCHEME",
+    "checkNecessity": "CHECK_NECESSARY",
+    "payeeHidden": false
+  }
+]

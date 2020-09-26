@@ -1,0 +1,896 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "serviceId": "4",
+      "payeeTitle": "Мегафон",
+      "subline": "ОАО \"Мегафон\"",
+      "icon": "megafon",
+      "inn": "7744000775",
+      "processPaymentType": "ONE_STEP_SCHEME",
+      "checkNecessity": "CHECK_NECESSARY",
+      "payeeHidden": false,
+      "regions": [],
+      "amount": {
+        "min": 1000,
+        "max": 1499900
+      },
+      "params": [
+        {
+          "paramTitle": "Номер телефона",
+          "paramName": "account",
+          "paramType": "StringField",
+          "paramDescription": "Введите номер телефона",
+          "paramHidden": false,
+          "paramMask": "+7 ([000]) [000] [00] [00]",
+          "regExp": "^\\d{10}$",
+          "maxLength": 50,
+          "defaultValue": "",
+          "serverValidation": false,
+          "reference": "",
+          "paramRequired": true,
+          "paramReadOnly": false,
+          "sortOrder": 0,
+          "refreshOnChange": false
+        },
+        {
+          "paramTitle": "Ф.И.О.",
+          "paramName": "fio",
+          "paramType": "StringField",
+          "paramDescription": "Введите Ф.И.О.",
+          "paramHidden": false,
+          "paramMask": "[A-----------------------------------------------------]",
+          "regExp": "",
+          "maxLength": 50,
+          "defaultValue": "",
+          "serverValidation": false,
+          "reference": "",
+          "paramRequired": true,
+          "paramReadOnly": false,
+          "sortOrder": 10,
+          "refreshOnChange": false
+        },
+        {
+          "paramTitle": "Адрес регистрации",
+          "paramName": "address",
+          "paramType": "StringField",
+          "paramDescription": "",
+          "paramHidden": true,
+          "paramMask": "",
+          "regExp": "",
+          "maxLength": 50,
+          "defaultValue": "",
+          "serverValidation": false,
+          "reference": "",
+          "paramRequired": false,
+          "paramReadOnly": false,
+          "sortOrder": 10,
+          "refreshOnChange": false
+        },
+        {
+          "paramTitle": "Номер платежа в ПС Рапида",
+          "paramName": "receipt",
+          "paramType": "StringField",
+          "paramDescription": "",
+          "paramHidden": true,
+          "paramMask": "",
+          "regExp": "",
+          "maxLength": 50,
+          "defaultValue": "",
+          "serverValidation": false,
+          "reference": "",
+          "paramRequired": false,
+          "paramReadOnly": false,
+          "sortOrder": 10,
+          "refreshOnChange": false
+        },
+        {
+          "paramTitle": "описание результата обработки",
+          "paramName": "description",
+          "paramType": "StringField",
+          "paramDescription": "",
+          "paramHidden": true,
+          "paramMask": "",
+          "regExp": "",
+          "maxLength": 50,
+          "defaultValue": "",
+          "serverValidation": false,
+          "reference": "",
+          "paramRequired": false,
+          "paramReadOnly": false,
+          "sortOrder": 10,
+          "refreshOnChange": false
+        }
+      ],
+      "parameters": [
+        {
+          "name": "RecBankCorrAcc",
+          "value": "30103810200000000290"
+        },
+        {
+          "name": "RecBankName",
+          "value": "ООО НКО «РАПИДА» г.Москва"
+        },
+        {
+          "name": "RecipientTrAcc",
+          "value": "40911810500000000340"
+        },
+        {
+          "name": "CashPlanDescr",
+          "value": "за услуги"
+        },
+        {
+          "name": "RecipientAcc",
+          "value": "30213810700000000094"
+        },
+        {
+          "name": "RecBankBIC",
+          "value": "044583290"
+        },
+        {
+          "name": "CashPlanSymbol",
+          "value": "11"
+        },
+        {
+          "name": "outerview",
+          "value": "Vozrojdenie.dll"
+        },
+        {
+          "name": "rdlc",
+          "value": "Rapida.rdlc"
+        },
+        {
+          "name": "Acc47423",
+          "value": "Заглушка для 47423"
+        },
+        {
+          "name": "eKassir.Cashier.Print.PrechequeType",
+          "value": "Rdlc"
+        },
+        {
+          "name": "usePredefinedSteps",
+          "value": "True"
+        },
+        {
+          "name": "useAmount",
+          "value": "False"
+        },
+        {
+          "name": "useFio",
+          "value": "False"
+        },
+        {
+          "name": "AllowNerezPayment",
+          "value": "True"
+        },
+        {
+          "name": "RatingRecipient",
+          "value": "4"
+        },
+        {
+          "name": "SeveralRegion",
+          "value": "0"
+        },
+        {
+          "name": "Acc40907",
+          "value": "Заглушка 40907"
+        },
+        {
+          "name": "Schet30232",
+          "value": "Заглушка 30232"
+        },
+        {
+          "name": "ShortServiceName",
+          "value": "Мегафон"
+        },
+        {
+          "name": "org_form",
+          "value": "0|15000.01|600000.00"
+        },
+        {
+          "name": "DescrCashier",
+          "value": "Поступление от реализации платных услуг (выполненных работ) Переводы населения в адрес {PrintContext.Payment.Service.Name}  Номер абонента: {PrintContext.Payment.Account}"
+        },
+        {
+          "name": "RecipientTrAccBIC",
+          "value": "default"
+        },
+        {
+          "name": "importParams",
+          "value": "addressFact;birthDate;countryName;docName;docFromMonth;docNumber;docSerial;docId;address;birthPlace;docFromDay;docWho;docFromYear;docFromDay;docDueDay;docDueMonth;docDueYear;docKodPodrazd;fio;ContactPhoneNum;resident;Gender;country_codeFrom"
+        },
+        {
+          "name": "exportParams",
+          "value": "addressFact;birthDate;countryName;docName;docFromMonth;docNumber;docSerial;docId;address;birthPlace;docFromDay;docWho;docFromYear;docFromDay;docDueDay;docDueMonth;docDueYear;docKodPodrazd;fio;ContactPhoneNum;resident;Gender;country_codeFrom"
+        },
+        {
+          "name": "DirectContract",
+          "value": "0"
+        },
+        {
+          "name": "commisionService",
+          "value": " "
+        },
+        {
+          "name": "payment_delay",
+          "value": "15"
+        },
+        {
+          "name": "eKassir.Cashier.Print.ChequeRdlcFile",
+          "value": "Rapida.rdlc"
+        },
+        {
+          "name": "eKassir.Cashier.Print.ChequeType",
+          "value": "None"
+        },
+        {
+          "name": "ibnerez",
+          "value": "False"
+        },
+        {
+          "name": "searchtags",
+          "value": "мегафон;megafon;"
+        },
+        {
+          "name": "visibility",
+          "value": "all"
+        },
+        {
+          "name": "ThresholdAutopaymentsServiceId",
+          "value": "20554"
+        },
+        {
+          "name": "SupportedAutopayments",
+          "value": "Threshold"
+        },
+        {
+          "name": "DefaultDecade",
+          "value": "1"
+        }
+      ],
+      "paymentParameterGroups": [],
+      "references": {
+        "regions": []
+      },
+      "category": {
+        "categoryHidden": false,
+        "externalId": 10,
+        "payeesCount": 22,
+        "categoryId": 1090,
+        "categoryName": "Сотовая связь",
+        "categoryTitle": "Сотовая связь",
+        "icon": "ico-mobile",
+        "number": 999
+      }
+    }
+  ],
+  "required": [
+    "serviceId",
+    "payeeTitle",
+    "subline",
+    "icon",
+    "inn",
+    "processPaymentType",
+    "checkNecessity",
+    "payeeHidden",
+    "regions",
+    "amount",
+    "params",
+    "parameters",
+    "paymentParameterGroups",
+    "references",
+    "category"
+  ],
+  "properties": {
+    "serviceId": {
+      "$id": "#/properties/serviceId",
+      "type": "string",
+      "title": "The serviceId schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "4"
+      ]
+    },
+    "payeeTitle": {
+      "$id": "#/properties/payeeTitle",
+      "type": "string",
+      "title": "The payeeTitle schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Мегафон"
+      ]
+    },
+    "subline": {
+      "$id": "#/properties/subline",
+      "type": "string",
+      "title": "The subline schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "ОАО \"Мегафон\""
+      ]
+    },
+    "icon": {
+      "$id": "#/properties/icon",
+      "type": "string",
+      "title": "The icon schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "megafon"
+      ]
+    },
+    "inn": {
+      "$id": "#/properties/inn",
+      "type": "string",
+      "title": "The inn schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "7744000775"
+      ]
+    },
+    "processPaymentType": {
+      "$id": "#/properties/processPaymentType",
+      "type": "string",
+      "title": "The processPaymentType schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "ONE_STEP_SCHEME"
+      ]
+    },
+    "checkNecessity": {
+      "$id": "#/properties/checkNecessity",
+      "type": "string",
+      "title": "The checkNecessity schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "CHECK_NECESSARY"
+      ]
+    },
+    "payeeHidden": {
+      "$id": "#/properties/payeeHidden",
+      "type": "boolean",
+      "title": "The payeeHidden schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "regions": {
+      "$id": "#/properties/regions",
+      "type": "array",
+      "title": "The regions schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/regions/items"
+      }
+    },
+    "amount": {
+      "$id": "#/properties/amount",
+      "type": "object",
+      "title": "The amount schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "min": 1000,
+          "max": 1499900
+        }
+      ],
+      "required": [
+        "min",
+        "max"
+      ],
+      "properties": {
+        "min": {
+          "$id": "#/properties/amount/properties/min",
+          "type": "integer",
+          "title": "The min schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1000
+          ]
+        },
+        "max": {
+          "$id": "#/properties/amount/properties/max",
+          "type": "integer",
+          "title": "The max schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1499900
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "params": {
+      "$id": "#/properties/params",
+      "type": "array",
+      "title": "The params schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "paramTitle": "Номер телефона",
+            "paramName": "account",
+            "paramType": "StringField",
+            "paramDescription": "Введите номер телефона",
+            "paramHidden": false,
+            "paramMask": "+7 ([000]) [000] [00] [00]",
+            "regExp": "^\\d{10}$",
+            "maxLength": 50,
+            "defaultValue": "",
+            "serverValidation": false,
+            "reference": "",
+            "paramRequired": true,
+            "paramReadOnly": false,
+            "sortOrder": 0,
+            "refreshOnChange": false
+          },
+          {
+            "paramTitle": "Ф.И.О.",
+            "paramName": "fio",
+            "paramType": "StringField",
+            "paramDescription": "Введите Ф.И.О.",
+            "paramHidden": false,
+            "paramMask": "[A-----------------------------------------------------]",
+            "regExp": "",
+            "maxLength": 50,
+            "defaultValue": "",
+            "serverValidation": false,
+            "reference": "",
+            "paramRequired": true,
+            "paramReadOnly": false,
+            "sortOrder": 10,
+            "refreshOnChange": false
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/params/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/params/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "paramTitle": "Номер телефона",
+                "paramName": "account",
+                "paramType": "StringField",
+                "paramDescription": "Введите номер телефона",
+                "paramHidden": false,
+                "paramMask": "+7 ([000]) [000] [00] [00]",
+                "regExp": "^\\d{10}$",
+                "maxLength": 50,
+                "defaultValue": "",
+                "serverValidation": false,
+                "reference": "",
+                "paramRequired": true,
+                "paramReadOnly": false,
+                "sortOrder": 0,
+                "refreshOnChange": false
+              }
+            ],
+            "required": [
+              "paramTitle",
+              "paramName",
+              "paramType",
+              "paramDescription",
+              "paramHidden",
+              "paramMask",
+              "regExp",
+              "maxLength",
+              "defaultValue",
+              "serverValidation",
+              "reference",
+              "paramRequired",
+              "paramReadOnly",
+              "sortOrder",
+              "refreshOnChange"
+            ],
+            "properties": {
+              "paramTitle": {
+                "$id": "#/properties/params/items/anyOf/0/properties/paramTitle",
+                "type": "string",
+                "title": "The paramTitle schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Номер телефона"
+                ]
+              },
+              "paramName": {
+                "$id": "#/properties/params/items/anyOf/0/properties/paramName",
+                "type": "string",
+                "title": "The paramName schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "account"
+                ]
+              },
+              "paramType": {
+                "$id": "#/properties/params/items/anyOf/0/properties/paramType",
+                "type": "string",
+                "title": "The paramType schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "StringField"
+                ]
+              },
+              "paramDescription": {
+                "$id": "#/properties/params/items/anyOf/0/properties/paramDescription",
+                "type": "string",
+                "title": "The paramDescription schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Введите номер телефона"
+                ]
+              },
+              "paramHidden": {
+                "$id": "#/properties/params/items/anyOf/0/properties/paramHidden",
+                "type": "boolean",
+                "title": "The paramHidden schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "paramMask": {
+                "$id": "#/properties/params/items/anyOf/0/properties/paramMask",
+                "type": "string",
+                "title": "The paramMask schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "+7 ([000]) [000] [00] [00]"
+                ]
+              },
+              "regExp": {
+                "$id": "#/properties/params/items/anyOf/0/properties/regExp",
+                "type": "string",
+                "title": "The regExp schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "^\\d{10}$"
+                ]
+              },
+              "maxLength": {
+                "$id": "#/properties/params/items/anyOf/0/properties/maxLength",
+                "type": "integer",
+                "title": "The maxLength schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  50
+                ]
+              },
+              "defaultValue": {
+                "$id": "#/properties/params/items/anyOf/0/properties/defaultValue",
+                "type": "string",
+                "title": "The defaultValue schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  ""
+                ]
+              },
+              "serverValidation": {
+                "$id": "#/properties/params/items/anyOf/0/properties/serverValidation",
+                "type": "boolean",
+                "title": "The serverValidation schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "reference": {
+                "$id": "#/properties/params/items/anyOf/0/properties/reference",
+                "type": "string",
+                "title": "The reference schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  ""
+                ]
+              },
+              "paramRequired": {
+                "$id": "#/properties/params/items/anyOf/0/properties/paramRequired",
+                "type": "boolean",
+                "title": "The paramRequired schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "paramReadOnly": {
+                "$id": "#/properties/params/items/anyOf/0/properties/paramReadOnly",
+                "type": "boolean",
+                "title": "The paramReadOnly schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "sortOrder": {
+                "$id": "#/properties/params/items/anyOf/0/properties/sortOrder",
+                "type": "integer",
+                "title": "The sortOrder schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "refreshOnChange": {
+                "$id": "#/properties/params/items/anyOf/0/properties/refreshOnChange",
+                "type": "boolean",
+                "title": "The refreshOnChange schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "parameters": {
+      "$id": "#/properties/parameters",
+      "type": "array",
+      "title": "The parameters schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "name": "RecBankCorrAcc",
+            "value": "30103810200000000290"
+          },
+          {
+            "name": "RecBankName",
+            "value": "ООО НКО «РАПИДА» г.Москва"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/parameters/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/parameters/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "RecBankCorrAcc",
+                "value": "30103810200000000290"
+              }
+            ],
+            "required": [
+              "name",
+              "value"
+            ],
+            "properties": {
+              "name": {
+                "$id": "#/properties/parameters/items/anyOf/0/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "RecBankCorrAcc"
+                ]
+              },
+              "value": {
+                "$id": "#/properties/parameters/items/anyOf/0/properties/value",
+                "type": "string",
+                "title": "The value schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "30103810200000000290"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "paymentParameterGroups": {
+      "$id": "#/properties/paymentParameterGroups",
+      "type": "array",
+      "title": "The paymentParameterGroups schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/paymentParameterGroups/items"
+      }
+    },
+    "references": {
+      "$id": "#/properties/references",
+      "type": "object",
+      "title": "The references schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "regions": []
+        }
+      ],
+      "required": [
+        "regions"
+      ],
+      "properties": {
+        "regions": {
+          "$id": "#/properties/references/properties/regions",
+          "type": "array",
+          "title": "The regions schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "examples": [
+            []
+          ],
+          "additionalItems": true,
+          "items": {
+            "$id": "#/properties/references/properties/regions/items"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "category": {
+      "$id": "#/properties/category",
+      "type": "object",
+      "title": "The category schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "categoryHidden": false,
+          "externalId": 10,
+          "payeesCount": 22,
+          "categoryId": 1090,
+          "categoryName": "Сотовая связь",
+          "categoryTitle": "Сотовая связь",
+          "icon": "ico-mobile",
+          "number": 999
+        }
+      ],
+      "required": [
+        "categoryHidden",
+        "externalId",
+        "payeesCount",
+        "categoryId",
+        "categoryName",
+        "categoryTitle",
+        "icon",
+        "number"
+      ],
+      "properties": {
+        "categoryHidden": {
+          "$id": "#/properties/category/properties/categoryHidden",
+          "type": "boolean",
+          "title": "The categoryHidden schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "externalId": {
+          "$id": "#/properties/category/properties/externalId",
+          "type": "integer",
+          "title": "The externalId schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            10
+          ]
+        },
+        "payeesCount": {
+          "$id": "#/properties/category/properties/payeesCount",
+          "type": "integer",
+          "title": "The payeesCount schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            22
+          ]
+        },
+        "categoryId": {
+          "$id": "#/properties/category/properties/categoryId",
+          "type": "integer",
+          "title": "The categoryId schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1090
+          ]
+        },
+        "categoryName": {
+          "$id": "#/properties/category/properties/categoryName",
+          "type": "string",
+          "title": "The categoryName schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Сотовая связь"
+          ]
+        },
+        "categoryTitle": {
+          "$id": "#/properties/category/properties/categoryTitle",
+          "type": "string",
+          "title": "The categoryTitle schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Сотовая связь"
+          ]
+        },
+        "icon": {
+          "$id": "#/properties/category/properties/icon",
+          "type": "string",
+          "title": "The icon schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "ico-mobile"
+          ]
+        },
+        "number": {
+          "$id": "#/properties/category/properties/number",
+          "type": "integer",
+          "title": "The number schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            999
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

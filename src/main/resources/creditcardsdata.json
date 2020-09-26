@@ -1,0 +1,635 @@
+[
+  {
+    "id": 1021,
+    "product": {
+      "id": 20,
+      "code": "opencard_premium",
+      "name": "Opencard",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayWave Visa Signature",
+      "payment": {
+        "code": "visa",
+        "name": "Visa"
+      }
+    },
+    "tariffPlan": {
+      "code": "premium",
+      "name": "Премиум",
+      "systemName": null,
+      "minAmount": null,
+      "maxAmount": null
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB",
+      "USD",
+      "EUR"
+    ]
+  },
+  {
+    "id": 1022,
+    "product": {
+      "id": 20,
+      "code": "opencard_premium",
+      "name": "Opencard",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayPass MasterCard World Black Edition",
+      "payment": {
+        "code": "mc",
+        "name": "MasterCard"
+      }
+    },
+    "tariffPlan": {
+      "code": "premium",
+      "name": "Премиум",
+      "systemName": null,
+      "minAmount": null,
+      "maxAmount": null
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB",
+      "USD",
+      "EUR"
+    ]
+  },
+  {
+    "id": 3417,
+    "product": {
+      "id": 14,
+      "code": "avtocard",
+      "name": "Кредитная Автокарта",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayPass MasterCard World",
+      "payment": {
+        "code": "mc",
+        "name": "MasterCard"
+      }
+    },
+    "tariffPlan": {
+      "code": "gold",
+      "name": "Золотая",
+      "systemName": "Золотые карты",
+      "minAmount": 20000,
+      "maxAmount": 500000
+    },
+    "cardDesign": {
+      "code": "tower",
+      "name": "Башня",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3421,
+    "product": {
+      "id": 15,
+      "code": "lukoil",
+      "name": "Кредитная карта Лукойл",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayPass MasterCard World",
+      "payment": {
+        "code": "mc",
+        "name": "MasterCard"
+      }
+    },
+    "tariffPlan": {
+      "code": "gold",
+      "name": "Золотая",
+      "systemName": "Золотые карты",
+      "minAmount": 20000,
+      "maxAmount": 500000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3422,
+    "product": {
+      "id": 16,
+      "code": "travel",
+      "name": "Кредитная карта Travel",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayWave Visa Gold",
+      "payment": {
+        "code": "visa",
+        "name": "Visa"
+      }
+    },
+    "tariffPlan": {
+      "code": "gold",
+      "name": "Золотая",
+      "systemName": "Золотые карты",
+      "minAmount": 20000,
+      "maxAmount": 500000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3426,
+    "product": {
+      "id": 15,
+      "code": "lukoil",
+      "name": "Кредитная карта Лукойл",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayPass MasterCard World Black Edition",
+      "payment": {
+        "code": "mc",
+        "name": "MasterCard"
+      }
+    },
+    "tariffPlan": {
+      "code": "premium",
+      "name": "Премиум",
+      "systemName": "Премиальные карты",
+      "minAmount": 20000,
+      "maxAmount": 1000000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3430,
+    "product": {
+      "id": 16,
+      "code": "travel",
+      "name": "Кредитная карта Travel",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayWave Visa Signature",
+      "payment": {
+        "code": "visa",
+        "name": "Visa"
+      }
+    },
+    "tariffPlan": {
+      "code": "premium",
+      "name": "Премиум",
+      "systemName": "Премиальные карты",
+      "minAmount": 20000,
+      "maxAmount": 1000000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3437,
+    "product": {
+      "id": 15,
+      "code": "lukoil",
+      "name": "Кредитная карта Лукойл",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayPass MasterCard World",
+      "payment": {
+        "code": "mc",
+        "name": "MasterCard"
+      }
+    },
+    "tariffPlan": {
+      "code": "standart",
+      "name": "Стандарт",
+      "systemName": "Стандартные карты",
+      "minAmount": 20000,
+      "maxAmount": 500000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3439,
+    "product": {
+      "id": 16,
+      "code": "travel",
+      "name": "Кредитная карта Travel",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayWave Visa Classic",
+      "payment": {
+        "code": "visa",
+        "name": "Visa"
+      }
+    },
+    "tariffPlan": {
+      "code": "standart",
+      "name": "Стандарт",
+      "systemName": "Стандартные карты",
+      "minAmount": 20000,
+      "maxAmount": 500000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3491,
+    "product": {
+      "id": 18,
+      "code": "utair",
+      "name": "Кредитная карта Ютэйр",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayPass MasterCard World",
+      "payment": {
+        "code": "mc",
+        "name": "MasterCard"
+      }
+    },
+    "tariffPlan": {
+      "code": "standart",
+      "name": "Стандарт",
+      "systemName": "Стандартные карты",
+      "minAmount": 20000,
+      "maxAmount": 500000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3493,
+    "product": {
+      "id": 18,
+      "code": "utair",
+      "name": "Кредитная карта Ютэйр",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayPass MasterCard World",
+      "payment": {
+        "code": "mc",
+        "name": "MasterCard"
+      }
+    },
+    "tariffPlan": {
+      "code": "gold",
+      "name": "Золотая",
+      "systemName": "Золотые карты",
+      "minAmount": 20000,
+      "maxAmount": 500000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3494,
+    "product": {
+      "id": 18,
+      "code": "utair",
+      "name": "Кредитная карта Ютэйр",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayPass MasterCard World Black Edition",
+      "payment": {
+        "code": "mc",
+        "name": "MasterCard"
+      }
+    },
+    "tariffPlan": {
+      "code": "premium",
+      "name": "Премиум",
+      "systemName": "Премиальные карты",
+      "minAmount": 20000,
+      "maxAmount": 1000000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3709,
+    "product": {
+      "id": 17,
+      "code": "rzd",
+      "name": "Кредитная карта РЖД",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "MasterCard World Contactless",
+      "payment": {
+        "code": "mc",
+        "name": "MasterCard"
+      }
+    },
+    "tariffPlan": {
+      "code": "standart",
+      "name": "Стандарт",
+      "systemName": "Стандартные карты",
+      "minAmount": 20000,
+      "maxAmount": 500000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3710,
+    "product": {
+      "id": 17,
+      "code": "rzd",
+      "name": "Кредитная карта РЖД",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "MasterCard World Contactless",
+      "payment": {
+        "code": "mc",
+        "name": "MasterCard"
+      }
+    },
+    "tariffPlan": {
+      "code": "gold",
+      "name": "Золотая",
+      "systemName": "Золотые карты",
+      "minAmount": 20000,
+      "maxAmount": 500000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3711,
+    "product": {
+      "id": 17,
+      "code": "rzd",
+      "name": "Кредитная карта РЖД",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayPass MasterCard World Black Edition",
+      "payment": {
+        "code": "mc",
+        "name": "MasterCard"
+      }
+    },
+    "tariffPlan": {
+      "code": "premium",
+      "name": "Премиум",
+      "systemName": "Премиальные карты",
+      "minAmount": 20000,
+      "maxAmount": 1000000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 3807,
+    "product": {
+      "id": 13,
+      "code": "smart",
+      "name": "Смарт Карта Кредитная",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayWave Visa Gold",
+      "payment": {
+        "code": "visa",
+        "name": "Visa"
+      }
+    },
+    "tariffPlan": {
+      "code": "",
+      "name": "",
+      "systemName": "Нет",
+      "minAmount": 40000,
+      "maxAmount": 300000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  },
+  {
+    "id": 23807,
+    "product": {
+      "id": 21,
+      "code": "opencard",
+      "name": "Кредитная Opencard",
+      "type": {
+        "code": "credit-card",
+        "name": "Кредитная карта"
+      }
+    },
+    "cardType": {
+      "name": "PayWave Visa Gold",
+      "payment": {
+        "code": "visa",
+        "name": "Visa"
+      }
+    },
+    "tariffPlan": {
+      "code": "",
+      "name": "",
+      "systemName": "Нет",
+      "minAmount": 40000,
+      "maxAmount": 300000
+    },
+    "cardDesign": {
+      "code": null,
+      "name": "",
+      "designGroup": {
+        "name": "",
+        "code": "default"
+      }
+    },
+    "currencies": [
+      "RUB"
+    ]
+  }
+]

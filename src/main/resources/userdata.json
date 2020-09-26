@@ -1,0 +1,12 @@
+{
+  "surname": "Тестович",
+  "name": "Роман",
+  "patronymic": "Сергеевич",
+  "email": "test@test.com",
+  "phoneNumber": "9634705757",
+  "cardNumber": "5254773046199216",
+  "cardExpDate": "1224",
+  "cardCvc": "123",
+  "amount": "100",
+  "cityDelivery": "Москва"
+}
