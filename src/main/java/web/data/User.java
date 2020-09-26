@@ -38,6 +38,4 @@ public class User {
             throw new IllegalStateException("Can't read file");
         }
     }
-
-
 }

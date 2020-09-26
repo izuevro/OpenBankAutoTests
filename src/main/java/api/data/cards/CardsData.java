@@ -49,5 +49,4 @@ public class CardsData {
             throw new IllegalStateException("Can't read file");
         }
     }
-
 }
