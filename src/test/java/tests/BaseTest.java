@@ -24,7 +24,7 @@ public class BaseTest {
     private final DataConfig DataConfig = ConfigFactory.newInstance().create(DataConfig.class);
 
 
-    protected User user = new User().getUserFromConfig(DataConfig);
+    protected User user = new User().getRandomUserFromConfig(DataConfig);
 
     protected BasePage basePage = new BasePage();
     protected MainPage mainPage = new MainPage();

@@ -5,44 +5,47 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import tests.BaseTest;
 
 @Tag("positive")
 public class PositiveTests extends BaseTest {
 
-    @Test
-    @Owner("Роман Зуев")
     @Tag("web")
-    @DisplayName("Проверка открытия и закрытия submenu")
-    public void checkOpenAndCloseSubMenuTest() {
+    @Owner("Роман Зуев")
+    @ParameterizedTest(name = "Тест #{index}. Проверка открытия и закрытия submenu \"{0}\"")
+    @ValueSource(strings = {"Кредиты", "Карты", "Ипотека", "Вклады", "Платежи и переводы"})
+    public void checkOpenAndCloseSubMenuTest(String item) {
         basePage
                 .openURL("")
                 .closeAndCheckCookiesBlock();
         mainPage.
-                clickAndCheckHeaderSubNavMenuItemBox("Кредиты")
+                clickAndCheckHeaderSubNavMenuItemBox(item)
                 .closeAndCheckHeaderCollapseMenu();
     }
 
-    @Test
-    @Owner("Роман Зуев")
     @Tag("web")
-    @DisplayName("Проверка выбора региона в навигационном меню (в header)")
-    public void checkRegionInHeaderNavigationMenuTest() {
+    @Owner("Роман Зуев")
+    @ParameterizedTest(name = "Тест #{index}. Проверка выбора города \"{0}\" в навигационном меню (в header)")
+    @ValueSource(strings = {"Москва", "Челябинск", "Санкт-Петербург"})
+    public void checkRegionInHeaderNavigationMenuTest(String city) {
         basePage
                 .openURL("")
                 .closeAndCheckCookiesBlock();
         mainPage
                 .checkTextOfNavCitySelectLink("Другой город")
                 .clickAndCheckAppearanceCityBlock()
-                .fillFieldAndClickCityInput("Москва")
-                .checkTextOfNavCitySelectLink("Москва");
+                .fillFieldAndClickCityInput(city)
+                .checkTextOfNavCitySelectLink(city);
     }
 
-    @Test
-    @Owner("Роман Зуев")
     @Tag("web")
-    @DisplayName("Проверка и заполнение формы заказа карты Opencard Visa USD")
-    public void CheckAndFillFormOpencardVisaUsdTest() {
+    @Owner("Роман Зуев")
+    @ParameterizedTest(name = "Тест #{index}. Проверка и заполнение формы заказа карты Opencard [{arguments}]")
+    @CsvFileSource(resources = "/cardsWebTestsData.csv", numLinesToSkip = 1, delimiter = '|')
+    public void CheckAndFillFormOpencardCardTest(String type, String currency) {
         basePage
                 .openURL("")
                 .closeAndCheckCookiesBlock();
@@ -52,12 +55,12 @@ public class PositiveTests extends BaseTest {
         cardsPage
                 .selectCard("Opencard");
         opencardPageSteps
-                .CheckAndFillFormOpencard(user, "Visa", "USD", Condition.selected, "Продолжить");
+                .CheckAndFillFormOpencard(user, type, currency, Condition.selected, "Продолжить");
     }
 
-    @Test
-    @Owner("Роман Зуев")
     @Tag("web")
+    @Owner("Роман Зуев")
+    @Test
     @DisplayName("Проверка недоступности для выбора валют USD и EUR при оформлении карты Opencard MIR")
     public void checkNotAvailabilityOfUsdAndEurCurrencyForOpencardMirTest() {
         basePage

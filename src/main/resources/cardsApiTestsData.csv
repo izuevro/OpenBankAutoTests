@@ -1,0 +1,3 @@
+CardType|ProductParam|DesignParam|PaymentSystemParam
+debit|opencard|default|mc
+debit|opencard|default|visa

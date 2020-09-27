@@ -11,7 +11,8 @@ public class OpencardPageSteps {
 
     @Step("Проверить и заполнить форму заказа карты \"Opencard {type} {currency}\"")
     public OpencardPageSteps CheckAndFillFormOpencard(User user, String type, String currency, Condition isSelected, String buttonText) {
-        opencardPage.selectCardType(type)
+        opencardPage
+                .selectCardType(type)
                 .selectCardCurrency(currency)
                 .checkEmptyAndFillLastNameInput(user.getSurname())
                 .checkEmptyAndFillNameInput(user.getName())
@@ -27,7 +28,8 @@ public class OpencardPageSteps {
 
     @Step("Проверить доступность кнопок валют USD и EUR при оформлении карты \"Opencard {type}\"")
     public OpencardPageSteps checkAvailabilityOfUsdAndEurCurrencyForOpencard(String type, Condition isVisible) {
-        opencardPage.selectCardType(type)
+        opencardPage
+                .selectCardType(type)
                 .checkUsdButtonCondition(isVisible)
                 .checkEurButtonCondition(isVisible);
         return this;

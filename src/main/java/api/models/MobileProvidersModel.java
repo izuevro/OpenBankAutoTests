@@ -13,7 +13,7 @@ public class MobileProvidersModel {
 
     MobileProvidersSpecification mobileProviderSpecification = new MobileProvidersSpecification();
 
-    @Step("Отправить запрос и проверить ответ на соответствие Json-схеме")
+    @Step("Отправить запрос на получение данных мобильного провайдера и проверить ответ на соответствие Json-схеме")
     public void validateJsonSchemaOfMobileProvider(String serviceId) {
         given()
                 .formParam("serviceId", serviceId)

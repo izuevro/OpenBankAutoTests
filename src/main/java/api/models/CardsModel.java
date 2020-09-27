@@ -7,11 +7,24 @@ import io.qameta.allure.Step;
 
 import static api.helpers.ParamsBuilder.paramsToMap;
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CardsModel {
 
     CardsSpecification cardsSpecification = new CardsSpecification();
+
+    @Step("Отправить запрос на получение данных карты и проверить ответ на соответствие Json-схеме")
+    public void validateJsonSchemaOfCards(String type, ParamsBuilder paramsBuilder) {
+        given()
+                .spec(cardsSpecification.getRequestSpecification())
+                .queryParams(paramsToMap(paramsBuilder))
+                .when()
+                .get(type)
+                .then()
+                .spec(cardsSpecification.getResponseSpecification())
+                .assertThat().body(matchesJsonSchemaInClasspath("cardsSchema.json"));
+    }
 
     /**
      * Получим массив объектов данных по картам

@@ -36,9 +36,9 @@ public class MobileProviderData {
     public static MobileProviderData getMobileProviderFromConfig(DataConfig dataConfig, String serviceId) {
         try {
             String content = new String(Files.readAllBytes(Paths.get(dataConfig.MobileProviderData())), StandardCharsets.UTF_8);
-            ObjectMapper objectMapper = new ObjectMapper();
+            ObjectMapper mapper = new ObjectMapper();
             List<?> list = JsonPath.parse(content).read("$[?(@.serviceId=='" + serviceId + "')]");
-            return objectMapper.convertValue(list.get(0), MobileProviderData.class);
+            return mapper.convertValue(list.get(0), MobileProviderData.class);
         } catch (IOException e) {
             throw new IllegalStateException("Can't read file");
         }

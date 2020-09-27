@@ -11,7 +11,8 @@ public class PaymentsPageSteps {
 
     @Step("Заполнить форму оплаты мобильной связи и проверить кнопку \"Оплатить\"")
     public PaymentsPageSteps checkAndFillDataOnMobilePaymentPage(User user, Condition isSelected, String attribute) {
-        paymentsPage.checkAndFillPaymentPhoneNumberInput(user.getPhoneNumber())
+        paymentsPage
+                .checkAndFillPaymentPhoneNumberInput(user.getPhoneNumber())
                 .checkAndFillPaymentCardNumberInput(user.getCardNumber())
                 .checkAndFillPaymentCardExpDateInput(user.getCardExpDate())
                 .checkAndFillPaymentCardCvcInput(user.getCardCvc())

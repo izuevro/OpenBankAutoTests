@@ -6,9 +6,11 @@ import api.data.cards.CardsData;
 import api.helpers.ParamsBuilder;
 import io.qameta.allure.Owner;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import tests.BaseApiTest;
 
 import static api.data.CityData.createCityData;
@@ -17,48 +19,61 @@ import static api.data.cards.CardsData.getCardsFromConfig;
 
 public class ApiTests extends BaseApiTest {
 
-    @Test
-    @Owner("Роман Зуев")
     @Tag("api")
-    @DisplayName("Проверка наличия города \"Москва\" в справочнике городов")
-    public void checkPresenceCityInCitiesDirectoryTest() {
-        CityData cityData = createCityData(1204, "Москва");
+    @Owner("Роман Зуев")
+    @ParameterizedTest(name = "Тест #{index}. Проверка наличия города \"{1}\" c id=\"{0}\" в справочнике городов")
+    @CsvSource(value = {"1204:Москва", "2309:Челябинск", "1751:Санкт-Петербург"}, delimiter = ':')
+    public void checkPresenceCityInCitiesDirectoryTest(int id, String city) {
+        CityData cityData = createCityData(id, city);
         Response response = citiesModel.getAllCitiesResponse();
         CityData cityFromResponse = citiesModel.extractCityFromResponse(response, cityData.getTitle());
         citiesModel.assertEqualsCityData(cityFromResponse, cityData);
     }
 
-    @Test
-    @Owner("Роман Зуев")
     @Tag("api")
-    @DisplayName("Проверка соответствия ответа с данными поставщика \"Мегафон\"")
-    public void checkEqualsMobileProviderDataResponseTest() {
-        MobileProviderData megafonData = getMobileProviderFromConfig(dataConfig, "4");
-        MobileProviderData responseData = mobileProviderModel.getMobileProviderResponseData(megafonData.getServiceId());
-        mobileProviderModel.assertEqualsProviderData(responseData, megafonData);
+    @Owner("Роман Зуев")
+    @ParameterizedTest(name = "Тест #{index}. Проверка соответствия ответа с данными мобильного провайдера serviceId=\"{0}\"")
+    @ValueSource(strings = {"4", "2", "6", "3", "1847"})
+    public void checkEqualsMobileProviderDataResponseTest(String serviceId) {
+        MobileProviderData expectData = getMobileProviderFromConfig(dataConfig, serviceId);
+        MobileProviderData responseData = mobileProviderModel.getMobileProviderResponseData(expectData.getServiceId());
+        mobileProviderModel.assertEqualsProviderData(responseData, expectData);
     }
 
-    @Test
-    @Owner("Роман Зуев")
     @Tag("api")
-    @DisplayName("Проверка соответствия ответа с данными мобильного провайдера \"Мегафон\" Json-схеме")
-    public void validateJsonSchemaOfMobileProviderTest() {
-        mobileProviderModel.validateJsonSchemaOfMobileProvider("4");
+    @Owner("Роман Зуев")
+    @ParameterizedTest(name = "Тест #{index}. Проверка соответствия ответа с данными мобильного провайдера serviceId=\"{0}\" Json-схеме")
+    @ValueSource(strings = {"4", "2", "6", "3", "1847"})
+    public void validateJsonSchemaOfMobileProviderTest(String serviceId) {
+        mobileProviderModel.validateJsonSchemaOfMobileProvider(serviceId);
     }
 
-    @Test
-    @Owner("Роман Зуев")
     @Tag("api")
-    @DisplayName("Проверка соответствия ответа данных о карте")
-    public void assertEqualsDataOfCardTest() {
+    @Owner("Роман Зуев")
+    @ParameterizedTest(name = "Тест #{index}. Проверка соответствия ответа данных о {0}-{1} карте с параметрами [{2},{3}]")
+    @CsvFileSource(resources = "/cardsApiTestsData.csv", numLinesToSkip = 1, delimiter = '|')
+    public void assertEqualsDataOfCardTest(String type, String product, String design, String payment) {
         ParamsBuilder paramsBuilder = ParamsBuilder.builder()
-                .product("opencard")
-                .design("default")
-                .paymentSystem("mc")
+                .product(product)
+                .design(design)
+                .paymentSystem(payment)
                 .build();
-        CardsData responseData = cardsModel.getCardsResponseData("debit", paramsBuilder);
+        CardsData responseData = cardsModel.getCardsResponseData(type, paramsBuilder);
         int responseId = responseData.getId();
-        CardsData expectData = getCardsFromConfig(dataConfig, "debit", responseId);
+        CardsData expectData = getCardsFromConfig(dataConfig, type, responseId);
         cardsModel.assertResponseData(expectData, responseData);
+    }
+
+    @Tag("api")
+    @Owner("Роман Зуев")
+    @ParameterizedTest(name = "Тест #{index}. Проверка соответствия ответа с данными карты {0}-{1} и параметрами [{2},{3}], Json-схеме")
+    @CsvFileSource(resources = "/cardsApiTestsData.csv", numLinesToSkip = 1, delimiter = '|')
+    public void validateJsonSchemaOfCardsTest(String type, String product, String design, String payment) {
+        ParamsBuilder paramsBuilder = ParamsBuilder.builder()
+                .product(product)
+                .design(design)
+                .paymentSystem(payment)
+                .build();
+        cardsModel.validateJsonSchemaOfCards(type, paramsBuilder);
     }
 }

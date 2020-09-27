@@ -1,12 +1,28 @@
-{
-  "surname": "Тестович",
-  "name": "Роман",
-  "patronymic": "Сергеевич",
-  "email": "test@test.com",
-  "phoneNumber": "9634705757",
-  "cardNumber": "5254773046199216",
-  "cardExpDate": "1224",
-  "cardCvc": "123",
-  "amount": "100",
-  "cityDelivery": "Москва"
-}
+[
+  {
+    "id": "1",
+    "surname": "Первый",
+    "name": "Роман",
+    "patronymic": "Сергеевич",
+    "email": "first@test.com",
+    "phoneNumber": "9634705757",
+    "cardNumber": "5254773046199216",
+    "cardExpDate": "1224",
+    "cardCvc": "123",
+    "amount": "100",
+    "cityDelivery": "Москва"
+  },
+  {
+    "id": "2",
+    "surname": "Второй",
+    "name": "Роман",
+    "patronymic": "Сергеевич",
+    "email": "second@test.com",
+    "phoneNumber": "9635604749",
+    "cardNumber": "4276380123406573",
+    "cardExpDate": "1125",
+    "cardCvc": "321",
+    "amount": "200",
+    "cityDelivery": "Санкт-Петербург"
+  }
+]
