@@ -34,7 +34,7 @@ public class MainPage extends BasePage {
     public MainPage clickDropDownMenuItem(String text) {
         parameter("Раздел в выпадающем меню", text);
 
-        headerCollapseMenu.$(byText(text)).closest("div").click();
+        headerCollapseMenu.$(byText(text)).click();
         return this;
     }
 
