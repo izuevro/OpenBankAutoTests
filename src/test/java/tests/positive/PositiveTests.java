@@ -21,8 +21,8 @@ public class PositiveTests extends BaseTest {
         basePage
                 .openURL("")
                 .closeAndCheckCookiesBlock();
-        mainPage.
-                clickAndCheckHeaderSubNavMenuItemBox(item)
+        mainPage
+                .clickAndCheckHeaderSubNavMenuItemBox(item)
                 .closeAndCheckHeaderCollapseMenu();
     }
 

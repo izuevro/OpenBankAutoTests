@@ -1,4 +1,4 @@
-package tests.nagative;
+package tests.negative;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Owner;

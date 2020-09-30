@@ -14,6 +14,8 @@ public class OpencardPage extends BasePage {
 
     private final SelenideElement cardFrame = $("#iframe");
 
+    private final SelenideElement selectCardBlock = $("#select-card");
+
     private final SelenideElement visaButton = $("#visa");
     private final SelenideElement mcButton = $("#mc");
     private final SelenideElement mirButton = $("#mir");
@@ -71,12 +73,15 @@ public class OpencardPage extends BasePage {
     public OpencardPage selectCardType(String type) {
         switch (type) {
             case "Visa":
+                selectCardBlock.scrollTo();
                 visaButton.click();
                 return this;
             case "Mastercard":
+                selectCardBlock.scrollTo();
                 mcButton.click();
                 return this;
             case "MIR":
+                selectCardBlock.scrollTo();
                 mirButton.click();
                 return this;
             default:
